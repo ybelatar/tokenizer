@@ -1,7 +1,7 @@
 # Token42 (TKN) - README
 
 ## Introduction
-Token42 (TKN) is an ERC-20 token created on the Ethereum blockchain as part of a school project named "Tokenizer." This project is designed to teach the fundamentals of blockchain development and token creation while adhering to technical standards and ensuring secure deployment.
+Token42 (TKN) is an ERC-20 token created on the Ethereum blockchain named "Tokenizer". This project is designed to teach the fundamentals of blockchain development and token creation while adhering to technical standards and ensuring secure deployment.
 
 Token42 demonstrates basic functionality as an ERC-20 token, including transferring tokens between wallets and querying balances. The ticker symbol for the token is **TKN**, and it follows the ERC-20 standard, which is widely recognized and supported across the Ethereum ecosystem.
 
@@ -20,10 +20,10 @@ The smart contract was developed using Solidity, the primary language for writin
 - **Remix IDE**: For writing, testing, and deploying the smart contract.
 - **Hardhat**: To manage the local development environment and run tests.
 
-I followed tutorials on **NodeGuardians** to gain proficiency with Solidity and the Ethereum blockchain.
+I followed tutorials on **NodeGuardians** to gain proficiency with Solidity and the Ethereum blockchain (I greatly recommand the platform).
 
 ### Test Environment
-The project was developed and tested on the **Goerli testnet** to avoid the use of real funds. Goerli provides a safe environment to deploy and interact with the token without financial risk.
+The project was developed and tested on the **Sepolia testnet** to avoid the use of real funds. Sepolia provides a safe environment to deploy and interact with the token without financial risk.
 
 ## Repository Structure
 The project repository is structured as follows:
@@ -40,7 +40,7 @@ The project repository is structured as follows:
 This folder contains the Solidity code for the Token42 smart contract. The code is well-documented with clear and explicit comments, ensuring readability and ease of understanding.
 
 ### `deployment/`
-This folder includes deployment scripts and necessary configurations to deploy Token42 on the Goerli testnet. Instructions for deploying the token are also included.
+This folder includes deployment scripts and necessary configurations to deploy Token42 on the Sepolia testnet. Instructions for deploying the token are also included.
 
 ### `documentation/`
 The documentation folder provides a comprehensive guide on:
@@ -57,18 +57,18 @@ Token42 complies with the ERC-20 standard and supports the following functionali
 4. **Ownership and Security**: The contract includes basic ownership privileges to prevent unauthorized modifications.
 
 ## Deployment Details
-- **Blockchain Network**: Ethereum (Goerli Testnet)
-- **Contract Address**: [Add the deployed contract address here after deployment]
-- **Explorer Link**: [Add the token's link on Etherscan here]
+- **Blockchain Network**: Ethereum (Sepolia Testnet)
+- **Contract Address**: 0x000
+- **Explorer Link**: www.google.fr
 
 ## Demonstration
 Minimalistic actions demonstrating the operation of Token42 include:
-- Deploying the token on the Goerli testnet.
+- Deploying the token on the Sepolia testnet.
 - Transferring tokens between two test accounts.
 - Querying account balances using a blockchain explorer.
 
 ## How to Use Token42
-1. Connect to the Goerli testnet using a wallet like MetaMask.
+1. Connect to the Sepolia testnet using a wallet like MetaMask.
 2. Add the Token42 contract address to view your token balance.
 3. Use a blockchain explorer or tools like Remix to interact with the contract.
 
@@ -82,5 +82,5 @@ Comprehensive documentation is included in the `documentation/` folder. This inc
 
 **Disclaimer**: This project is for educational purposes only. Token42 is deployed on a testnet and holds no real monetary value.
 
-For further questions, contact me directly.
+For further questions, contact me directly I'll try to help you as much as I can.
 
