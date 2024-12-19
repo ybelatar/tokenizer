@@ -4,12 +4,6 @@ import { expect } from "chai";
 
 const { ethers } = require("hardhat");
 
-// interface Token42Contract extends ethers.BaseContract {
-//   totalSupply(): Promise<bigint>;
-//   owner(): Promise<string>;
-//   balanceOf(address: string): Promise<bigint>;
-// }
-
 describe("Token42", function () {
   // We define a fixture to reuse the same setup in every test.
   // We use loadFixture to run this setup once, snapshot that state,
@@ -36,7 +30,7 @@ describe("Token42", function () {
     it("Should set the right owner", async function () {
       const { token42, owner } = await loadFixture(deployToken42Fixture);
 
-      expect(await token42.owner()).to.equal(owner.address);
+      expect(await token42.creator()).to.equal(owner.address);
     });
 
     it("Should give the owner all the supply", async function () {

@@ -14,11 +14,19 @@ contract Token42 {
 
 
 	address public creator;
+	address[] public signatories;
+	uint public requiredApprovals;
 
-    constructor(uint256 _supply) {
+	
+
+    constructor(uint256 _supply, address[] memory _signatories, uint _requiredApprovals) {
+		require(_signatories.length > 0, "At least one signatory required");
+		require(_requiredApprovals > 0 && _requiredApprovals <= _signatories.length, "Wrong number of required approvals");
 		TotalSupply = _supply;
 		creator = msg.sender;
 		balances[creator] = _supply;
+		requiredApprovals = _requiredApprovals;
+		signatories = _signatories;
 	}
 
 	function name() external view returns (string memory) {
@@ -43,6 +51,19 @@ contract Token42 {
 
 	modifier onlyCreator() {
 		require(msg.sender == creator, "Not the creator");
+		_;
+	}
+
+	modifier onlySignatory() {
+		bool isSignatory = false;
+		address[] memory signers = signatories;
+		for (uint i = 0; i < signers.length; i++) {
+			if (msg.sender == signers[i]) {
+				isSignatory = true;
+				break;
+			}
+		}
+		require(isSignatory, "Not allowed to sign");
 		_;
 	}
 	
